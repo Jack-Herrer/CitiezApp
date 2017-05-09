@@ -6,3 +6,7 @@ git  repo created
 
 
 splash screen created
+
+FAQ activity with scrollable textview
+
+

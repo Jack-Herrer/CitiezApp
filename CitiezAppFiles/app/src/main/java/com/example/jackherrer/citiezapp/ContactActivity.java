@@ -1,23 +1,20 @@
 package com.example.jackherrer.citiezapp;
-
 /**
  * Created by Michiel van der List on 9-5-17
  * michielvanderlist@gmail.com
  *
- * Class shows activity theme as splash screen
+ * Main menu
  */
 
-import android.content.Intent;
-import android.os.Bundle;
+//TODO: build link to website, link to android call and to email
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-public class SplashActivity extends AppCompatActivity {
+public class ContactActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
+        setContentView(R.layout.activity_contact);
     }
 }
