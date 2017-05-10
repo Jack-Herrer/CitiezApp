@@ -22,6 +22,8 @@ import static android.R.id.message;
 
 public class ContactActivity extends AppCompatActivity {
 
+    private static int MY_PERMISSIONS_REQUEST_CALL_PHONE;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +37,9 @@ public class ContactActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // todo place correct email
     //user is redirected to email client on click
     public void onEmailClick(View view) {
-// todo place correct email
         Uri uri = Uri.parse("mailto:info@yourcompany.com");
         Intent sendEmail = new Intent(Intent.ACTION_SENDTO, uri);
         sendEmail.putExtra(Intent.EXTRA_SUBJECT,
@@ -45,18 +47,21 @@ public class ContactActivity extends AppCompatActivity {
         startActivity(sendEmail);
     }
 
+    // todo: place correct phone number
+    // Dial citiez hotel phone number
     public void onCallClick(View view) {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
         callIntent.setData(Uri.parse("tel:123456789"));
+
+        //check for permission
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: GET CALL PERMISSION
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             Toast.makeText(getApplicationContext(), "no permission to dial",Toast.LENGTH_SHORT).show();
+
+            //get permission to call
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    MY_PERMISSIONS_REQUEST_CALL_PHONE);
+
             return;
         }
         startActivity(callIntent);
