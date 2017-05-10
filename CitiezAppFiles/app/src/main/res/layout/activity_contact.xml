@@ -34,4 +34,14 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="231dp"
         android:onClick="onWebsiteClick"/>
+
+    <Button
+        android:id="@+id/facebookbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onFacebookClick"
+        android:layout_marginLeft="8dp"
+        android:text="Facebook"
+        app:layout_constraintLeft_toRightOf="@+id/emailbutton"
+        tools:layout_editor_absoluteY="231dp" />
 </android.support.constraint.ConstraintLayout>

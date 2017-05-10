@@ -30,11 +30,12 @@ public class ContactActivity extends AppCompatActivity {
 
     //user is redirected directly to website on click
     public void onWebsiteClick(View view) {
-        Uri uri = Uri.parse("http://www.citiezhotelamsterdam.com"); // missing 'http://' will cause crashed
+        Uri uri = Uri.parse("http://www.citiezhotelamsterdam.com");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
+    //user is redirected to email client on click
     public void onEmailClick(View view) {
 // todo place correct email
         Uri uri = Uri.parse("mailto:info@yourcompany.com");
@@ -42,14 +43,13 @@ public class ContactActivity extends AppCompatActivity {
         sendEmail.putExtra(Intent.EXTRA_SUBJECT,
                 "Customer comments/questions");
         startActivity(sendEmail);
-
     }
 
     public void onCallClick(View view) {
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
         callIntent.setData(Uri.parse("tel:123456789"));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
+            // TODO: GET CALL PERMISSION
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
             //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
@@ -60,5 +60,9 @@ public class ContactActivity extends AppCompatActivity {
             return;
         }
         startActivity(callIntent);
+    }
+
+    public void onFacebookClick(View view) {
+//        TODO CREATE FACEBOOK CLICK HANDLER
     }
 }

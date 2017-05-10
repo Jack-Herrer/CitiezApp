@@ -3,11 +3,15 @@
 
     <item
         android:drawable="@color/gray"/>
+    <!--<item-->
+        <!--android:drawable="@drawable/citiez_logo"/>-->
+
 
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@drawable/citiez_logo"
+            />
     </item>
 
 </layer-list>
