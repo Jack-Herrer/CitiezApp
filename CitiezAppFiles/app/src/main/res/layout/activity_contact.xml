@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context="com.example.jackherrer.citiezapp.ContactActivity">
 
+    <Button
+        android:id="@+id/callbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        tools:layout_editor_absoluteY="230dp"
+        android:onClick="onCallClick"
+        app:layout_constraintLeft_toRightOf="@+id/websitebuttton"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/emailbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        tools:layout_editor_absoluteY="231dp"
+        android:onClick="onEmailClick"
+        app:layout_constraintLeft_toRightOf="@+id/callbutton"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/websitebuttton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="231dp"
+        android:onClick="onWebsiteClick"/>
 </android.support.constraint.ConstraintLayout>

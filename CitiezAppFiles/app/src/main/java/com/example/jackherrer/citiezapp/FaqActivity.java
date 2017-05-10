@@ -4,7 +4,7 @@ package com.example.jackherrer.citiezapp;
  * Created by Michiel van der List on 9-5-17
  * michielvanderlist@gmail.com
  *
- * Main menu
+ * faq's activity makes sure html directly copied from website is showed in textview
  */
 
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 // TODO: Adjust information and style
 
-public class FAQActivity extends AppCompatActivity {
+public class FaqActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

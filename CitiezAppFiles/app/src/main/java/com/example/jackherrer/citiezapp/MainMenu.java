@@ -21,11 +21,13 @@ public class MainMenu extends AppCompatActivity {
     }
 
 
-    public void onInfoClick(View view) {
-        Intent intent = new Intent(this, FAQActivity.class);
+    public void onFaqClick(View view) {
+        Intent intent = new Intent(this, FaqActivity.class);
         startActivity(intent);
+    }
 
-//        TODO Chose if activity has to be closed
-//        finish();
+    public void onContactClick(View view) {
+        Intent intent = new Intent(this, ContactActivity.class);
+        startActivity(intent);
     }
 }
